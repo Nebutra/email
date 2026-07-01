@@ -1,0 +1,61 @@
+{
+  "name": "@nebutra/email",
+  "version": "0.1.1",
+  "description": "Multi-provider transactional email (Resend, Nodemailer, Console)",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "nebutra": {
+    "featureId": "email",
+    "category": "integrations",
+    "summary": "Multi-provider transactional email (Resend, Nodemailer, Console)"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "resend": "^4.0.1"
+  },
+  "peerDependencies": {
+    "nodemailer": "^9.0.1"
+  },
+  "peerDependenciesMeta": {
+    "nodemailer": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.4"
+  },
+  "homepage": "https://github.com/Nebutra/email#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nebutra/email.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nebutra/email/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nebutraMirror": {
+    "sourceRepository": "Nebutra/Nebutra-Sailor",
+    "sourceDirectory": "packages/integrations/email",
+    "sourcePackage": "@nebutra/email",
+    "sourceSha": "50022c4f2966bbe11b4a269d1e6719d2bbb9746a",
+    "canonicalSource": "monorepo"
+  }
+}
